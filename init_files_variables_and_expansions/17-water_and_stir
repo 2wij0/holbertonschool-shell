@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $WATER $STIR | tr 'waterstir.' '0123401234' | awk '{W=0;S=0;for(i=1;i<=length($1);i++)W=W*5+substr($1,i,1);for(i=1;i<=length($2);i++)S=S*5+substr($2,i,1);R=W+S;while(R>0){res=substr("bestchol",R%13+1,1)res;R=int(R/13)}print res}'
+echo "13o 5i $(echo $WATER | tr 'water' '01234') $(echo $STIR | tr 'stir.' '01234') + p" | dc | tr '0123456789ABC' 'bestchol' | tr '[:upper:]' '[:lower:]'
