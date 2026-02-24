@@ -1,2 +1,2 @@
 #!/bin/bash
-xargs -L 2 printf "%s\n"
+sed -n '1~2p'
